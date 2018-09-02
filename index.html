@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andy's Ark calculator</title>
+</head>
+<body>
+
+<h1>Andy's Ark max level config generator</h1>
+
+<p>Reload the page to get defaults again. <strong>Simple instructions</strong> - change the Max level then paste in to your config file.</p>
+<p>Single Player config file on Windows: <blockquote>Steam > steamapps > common > ARK > ShooterGame > Saved > Config > WindowsNoEditor > Game.ini</blockquote></p>
+<p>Single Player config file on Linux: <blockquote>~/.steam/steamapps/common/ARK/ShooterGame/Saved/Config/LinuxNoEditor/Game.ini</blockquote></p>
+
+
+<form id="configCalulatorForm">
+    <h3>Character settings</h3>
+    <div>
+        <label for="characterMaxLevel">Max level:</label>
+        <input type="number" value="150" min="5" id="characterMaxLevel">
+    </div>
+    <div>
+        <label for="characterStartExperience">Engram start value (level 0):</label>
+        <input type="number" value="5" min="1" id="characterStartExperience">
+    </div>
+    <div>
+        <label for="characterFirstExperienceJump">Engram first jump (level 0 to level 1):</label>
+        <input type="number" value="15" min="1" id="characterFirstExperienceJump">
+    </div>
+    <div>
+        <label for="characterExperienceMultiplier">Character experience multiplier (higher = harder):</label>
+        <input type="number" min="0" step="0.01" value="1.08" id="characterExperienceMultiplier">
+    </div>
+    <div>
+        <label for="characterEngramStart">Engram start:</label>
+        <input type="number" value="8" min="1" id="characterEngramStart">
+    </div>
+    <div>
+        <label for="characterEngramFrequency">Engram increase frequency (higher = harder):</label>
+        <input type="number" value="10" min="1" id="characterEngramFrequency">
+    </div>
+    <div>
+        <label for="characterEngramMultiplier">Engram increase multiplier (higher = more Engrams):</label>
+        <input type="number" value="1.25" step="0.01" id="characterEngramMultiplier">
+    </div>
+
+
+    <h3><input type="checkbox" id="outputDino"><label for="outputDino">Dino settings</label></h3>
+    <div>
+        <label for="dinoMaxLevel">Max level:</label>
+        <input type="number" value="150" min="5" id="dinoMaxLevel">
+    </div>
+    <div>
+        <label for="dinoStartExperience">Engram start value (level 0):</label>
+        <input type="number" value="5" min="1" id="dinoStartExperience">
+    </div>
+    <div>
+        <label for="dinoFirstExperienceJump">Engram first jump (level 0 to level 1):</label>
+        <input type="number" value="15" min="1" id="dinoFirstExperienceJump">
+    </div>
+    <div>
+        <label for="dinoExperienceMultiplier">Character experience multiplier (higher = harder):</label>
+        <input type="number" min="0" step="0.01" value="1.08" id="dinoExperienceMultiplier">
+    </div>
+
+    <input type="submit" value="Generate" name="submitForm">
+</form>
+
+<div id="outputContainer" class="inactive">
+    <h3>Full Config (don't copy line 1 unless your file is empty)</h3>
+    <code id="fullConfig">
+    </code>
+</div>
+<script type="text/javascript" src="js/calculator.js"></script>
+</body>
+</html>
