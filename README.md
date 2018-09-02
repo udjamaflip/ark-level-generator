@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+## Andy's Ark level config generator
 
-You can use the [editor on GitHub](https://github.com/udjamaflip/ark-level-generator/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[Just want to use it?](https://udjamaflip.github.io/ark-level-generator/)
 
-### Markdown
+The config paths at the top of the page are for single player, if you want to change for private server config the path is different.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Character settings
+**Max level [Default: 150]**
+- The maximum player level you want to set - must be above 2. Untested above 250, make sure you tweak multipliers.
 
-```markdown
-Syntax highlighted code block
+**Experience start value (level 0) [Default: 5]**
+- The starting experience level for a level 0 player.
 
-# Header 1
-## Header 2
-### Header 3
+**Experience first jump (level 0 to level 1) [Default: 15]**  
+- The base increment the multiplier works from, higher means the gaps grow quicker.
 
-- Bulleted
-- List
+**Character experience multiplier (higher = harder) [Default: 1.08]**
+- This defines the exponential difference between experience required for the next level.
 
-1. Numbered
-2. List
+**Engram start [Default: 8]**
+- The base amount of engram points achieved per level i.e. level 1 = 8 new Engram points.
 
-**Bold** and _Italic_ and `Code` text
+**Engram increase frequency (higher = harder) [Default: 10]** 
+- How frequently the quantity of Engrams changes. Level 10 you'll get more than Level 1 etc
 
-[Link](url) and ![Image](src)
-```
+**Engram increase multiplier (higher = more Engrams) [Default: 1.25]**  
+- What's the multiplier for Engrams. Values are rounded to whole numbers when calculated.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Dino settings *(disabled by default)*
+**Max level [Default: 150]**  
+- The maximum dino level you want to set - must be above 2. Untested above 250, make sure you tweak multipliers.
 
-### Jekyll Themes
+**Experience start value (level 0) [Default: 5]**  
+- The starting experience level for a level 0 dino.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/udjamaflip/ark-level-generator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+**Experience first jump (level 0 to level 1) [Default: 15]**  
+- The base increment the multiplier works from, higher means the gaps grow quicker.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Dino experience multiplier (higher = harder) [Default: 1.08]** 
+- This defines the exponential difference between experience required for the next level.
